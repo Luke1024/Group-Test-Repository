@@ -1,12 +1,19 @@
 package com.kodilla.ecommercee.domain;
 
 import com.kodilla.ecommercee.GenericEntity;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
-
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
 @Entity
 public class Group extends GenericEntity {
 
@@ -23,32 +30,5 @@ public class Group extends GenericEntity {
 
     public Group(String name) {
         this.name = name;
-    }
-
-    public Group() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public List<Product> getProducts() {
-        return products;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setProducts(List<Product> products) {
-        this.products = products;
     }
 }
